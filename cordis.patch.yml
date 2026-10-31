@@ -1,0 +1,10 @@
+# DSH「天气关怀」—— 它自己知道外面什么天
+- insert:
+    - id: weather
+      name: 'dsh-weather-care'
+      # 全部配置都可以在「天气关怀」面板里改，这里留空即可。
+      # 想在装机时预置的话，支持的键见 README「配置项」一节，例如：
+      #   qqOn: true                                   # 主动消息私聊推送到 QQ
+      #   qqConfigFile: 'C:/path/to/qqbridge/config.json'  # 从自家桥的 config.json 读地址/令牌/默认收件人
+      #   caiyunToken: 'your-caiyun-token'             # 填了才走彩云天气，否则用 Open-Meteo
+      config: {}
