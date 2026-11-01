@@ -28,7 +28,8 @@ ok('段文本 拼接', __test.段文本([{ type: 'text', data: { text: '你好' 
 // 4) 指令解析
 const 析 = __test.解析指令
 ok('指令 */位置 杭州', JSON.stringify(析('*/位置 杭州')) === JSON.stringify({ 令: '位置', 参: '杭州' }))
-ok('指令 *早报 07:30*', JSON.stringify(析('*早报 07:30*')) === JSON.stringify({ 令: '早报', 参: '07:30' }))
+ok('指令 无斜杠不算', 析('*早报 07:30*') === null)
 ok('指令 不是指令', 析('今天天气不错') === null)
+ok('指令 视频分享不算', 析('【复活员二2分钟被巡查团判定为作弊-哔哩哔哩】 https://b23.tv/wqViDsn') === null)
 
 console.log(process.exitCode ? '✗ 有问题' : '✓ 全部通过')
